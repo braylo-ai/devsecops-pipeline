@@ -1,0 +1,7 @@
+semgrep=0
+pip-audit=0
+osv-scanner=0
+gitleaks=0
+checkov=0
+trivy-config=0
+trivy-image=0

@@ -1,11 +1,11 @@
-"""PLANTED FINDINGS (main branch): hard-coded secrets.
+"""Secrets come from the environment (or a secret manager), never from code.
 
-Every value below is FAKE. Each contains the marker PLANTED_FAKE so nobody can
-mistake it for a real credential, and none uses a real provider's token format
-(GitHub push protection and real scanners would block those). The custom rules
-in .gitleaks.toml detect the marker.
+The planted values from `main` were fake. If they had been real, deleting them
+here would not be enough: they stay in git history and must be rotated.
 """
 
-DATABASE_URL = "postgres://payments:PLANTED_FAKE_db_password_0001@db.internal:5432/payments"
-STRIPE_KEY = "PLANTED_FAKE_payment_api_key_0002_not_real"
-JWT_SIGNING_SECRET = "PLANTED_FAKE_jwt_signing_secret_0003"
+import os
+
+DATABASE_URL = os.environ["DATABASE_URL"]
+PAYMENT_API_KEY = os.environ["PAYMENT_API_KEY"]
+JWT_SIGNING_SECRET = os.environ["JWT_SIGNING_SECRET"]

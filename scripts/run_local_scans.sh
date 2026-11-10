@@ -31,7 +31,8 @@ trivy config --severity HIGH,CRITICAL --exit-code 1 --format json \
   -o "$OUT/trivy-config.json" . >/dev/null 2>&1
 rec trivy-config $?
 
-BASE=$(awk '/^FROM/{print $2; exit}' Dockerfile)
+# Scan the runtime (last) base image; CI scans the built image.
+BASE=$(awk '/^FROM/{b=$2} END{print b}' Dockerfile)
 trivy image --severity HIGH,CRITICAL --ignore-unfixed --exit-code 1 --format json \
   -o "$OUT/trivy-image.json" "$BASE" >/dev/null 2>&1
 rec trivy-image $?

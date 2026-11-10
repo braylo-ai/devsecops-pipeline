@@ -145,8 +145,9 @@ def test_every_planted_secret_carries_fake_marker():
     settings = ROOT / "config" / "settings.py"
     if not settings.exists():
         pytest.skip("settings.py removed on the fixed branch")
-    values = re.findall(r'=\s*"([^"]+)"', settings.read_text())
-    assert values and all("PLANTED_FAKE" in v for v in values)
+    values = re.findall(r'^\w+\s*=\s*"([^"]+)"', settings.read_text(), re.M)
+    # main: every literal is a marked fake. fixed: no literals at all.
+    assert all("PLANTED_FAKE" in v for v in values)
 
 
 def test_gitleaks_report_is_redacted():
