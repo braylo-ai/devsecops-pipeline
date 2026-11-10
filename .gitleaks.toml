@@ -1,0 +1,13 @@
+# Default gitleaks rules plus one custom rule for the planted demo secrets.
+[extend]
+useDefault = true
+
+[[rules]]
+id = "planted-fake-secret"
+description = "Planted demo secret (fake, marker PLANTED_FAKE)"
+regex = '''PLANTED_FAKE_[A-Za-z0-9_]{8,}'''
+keywords = ["planted_fake"]
+
+[allowlist]
+description = "Docs and tests explain the marker; they are not secrets."
+paths = ['''README\.md''', '''tests/.*''', '''scan-results/.*''', '''docs/.*''']

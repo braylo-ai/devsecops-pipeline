@@ -1,0 +1,23 @@
+# PLANTED FINDINGS (main branch): insecure pod spec.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payments
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: payments }
+  template:
+    metadata:
+      labels: { app: payments }
+    spec:
+      hostNetwork: true
+      containers:
+        - name: payments
+          image: payments:latest
+          securityContext:
+            privileged: true
+            allowPrivilegeEscalation: true
+            runAsUser: 0
+          ports:
+            - containerPort: 5000

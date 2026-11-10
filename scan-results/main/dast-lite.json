@@ -1,0 +1,33 @@
+{
+  "target": "http://127.0.0.1:5055",
+  "checks": [
+    {
+      "check": "CSP header set (ZAP 10038)",
+      "passed": false
+    },
+    {
+      "check": "nosniff set (ZAP 10021)",
+      "passed": false
+    },
+    {
+      "check": "anti-clickjacking header set (ZAP 10020)",
+      "passed": false
+    },
+    {
+      "check": "Server header hides version (ZAP 10036)",
+      "passed": false
+    },
+    {
+      "check": "Session cookie HttpOnly (ZAP 10010)",
+      "passed": false
+    },
+    {
+      "check": "Session cookie SameSite (ZAP 10054)",
+      "passed": false
+    },
+    {
+      "check": "Reflected input is escaped (ZAP 40012, active)",
+      "passed": false
+    }
+  ]
+}
