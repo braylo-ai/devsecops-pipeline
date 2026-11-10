@@ -1,0 +1,47 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.76.2"
+  },
+  "ReportID": "01a1c736-f8ff-7822-97dc-757139268fc6",
+  "CreatedAt": "2026-11-10T14:47:11.103535-06:00",
+  "ArtifactID": "sha256:1290f30be46add059bd7b0f634a5629c011cab992cada18246fef3b39f77dd87",
+  "ArtifactName": ".",
+  "ArtifactType": "repository",
+  "Metadata": {
+    "Branch": "fixed",
+    "Commit": "315533654ec7e144bc7a146f32f7fddf950fc975",
+    "CommitMsg": "ci: devsecops workflow, gate summarizer, tests, main-branch scan results\n\nCo-Authored-By: Claude Opus 5.5 \u003cnoreply@anthropic.com\u003e",
+    "Author": "Brandon Lopez \u003cbraylo@dov.global\u003e",
+    "Committer": "Brandon Lopez \u003cbraylo@dov.global\u003e"
+  },
+  "Results": [
+    {
+      "Target": "Dockerfile",
+      "Class": "config",
+      "Type": "dockerfile",
+      "MisconfSummary": {
+        "Successes": 20,
+        "Failures": 0
+      }
+    },
+    {
+      "Target": "infra/k8s/deployment.yaml",
+      "Class": "config",
+      "Type": "kubernetes",
+      "MisconfSummary": {
+        "Successes": 22,
+        "Failures": 0
+      }
+    },
+    {
+      "Target": "infra/terraform",
+      "Class": "config",
+      "Type": "terraform",
+      "MisconfSummary": {
+        "Successes": 41,
+        "Failures": 0
+      }
+    }
+  ]
+}
