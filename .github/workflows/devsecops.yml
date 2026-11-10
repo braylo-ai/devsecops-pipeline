@@ -1,0 +1,117 @@
+name: devsecops
+# Every stage is a gate. On `main` (planted findings) each stage fails.
+# On `fixed` each stage passes. Raw reports upload as artifacts.
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+
+jobs:
+  sast:
+    runs-on: ubuntu-latest
+    container: semgrep/semgrep:1.140.0
+    steps:
+      - uses: actions/checkout@v4
+      - run: semgrep scan --config p/python --config p/flask --config p/secrets --metrics=off --error --json -o semgrep.json src/ config/
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: semgrep, path: semgrep.json }
+
+  sca:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pip-audit==2.9.0
+      - run: pip-audit -r requirements.txt --no-deps --disable-pip --format json -o pip-audit.json
+      - name: OSV-Scanner
+        if: always()
+        uses: google/osv-scanner-action/osv-scanner-action@v2.2.2
+        with:
+          scan-args: |-
+            --lockfile=requirements.txt
+            --format=json
+            --output=osv-scanner.json
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: sca, path: "*.json" }
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: gitleaks (working tree)
+        uses: docker://zricethezav/gitleaks:v8.28.0
+        with:
+          args: dir . --config .gitleaks.toml --redact --report-format json --report-path gitleaks.json
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: gitleaks, path: gitleaks.json }
+
+  iac:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install checkov==3.2.469
+      - run: checkov -d infra/ --quiet --compact -o json > checkov.json
+      - name: Trivy config (Dockerfile + IaC)
+        if: always()
+        uses: aquasecurity/trivy-action@0.33.1
+        with:
+          scan-type: config
+          scan-ref: .
+          severity: HIGH,CRITICAL
+          exit-code: "1"
+          format: json
+          output: trivy-config.json
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: iac, path: "*.json" }
+
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t target-app:ci .
+      - uses: aquasecurity/trivy-action@0.33.1
+        with:
+          image-ref: target-app:ci
+          severity: HIGH,CRITICAL
+          ignore-unfixed: true
+          exit-code: "1"
+          format: json
+          output: trivy-image.json
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: trivy-image, path: trivy-image.json }
+
+  dast:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t target-app:ci .
+      # The app listens only inside the runner. ZAP scans nothing else.
+      - run: docker run -d --name app -p 5000:5000 target-app:ci && sleep 5
+      - uses: zaproxy/action-baseline@v0.14.0
+        with:
+          target: http://localhost:5000
+          rules_file_name: .zap/rules.tsv
+          cmd_options: "-J zap.json"
+          allow_issue_writing: false
+          fail_action: true
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: zap, path: zap.json }
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pytest==9.2.0
+      - run: pytest -q

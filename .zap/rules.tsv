@@ -1,0 +1,6 @@
+10038	FAIL	(Content Security Policy header not set)
+10021	FAIL	(X-Content-Type-Options missing)
+10020	FAIL	(Anti-clickjacking header missing)
+10010	FAIL	(Cookie no HttpOnly flag)
+10054	FAIL	(Cookie without SameSite)
+10036	WARN	(Server leaks version)

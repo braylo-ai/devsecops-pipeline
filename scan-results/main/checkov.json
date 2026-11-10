@@ -1,0 +1,1369 @@
+[
+    {
+        "check_type": "terraform",
+        "results": {
+            "failed_checks": [
+                {
+                    "check_id": "CKV_AWS_53",
+                    "bc_check_id": "BC_AWS_S3_19",
+                    "check_name": "Ensure S3 bucket has block public ACLS enabled",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "block_public_acls"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/terraform/main.tf",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf",
+                    "repo_file_path": "/infra/terraform/main.tf",
+                    "file_line_range": [
+                        10,
+                        16
+                    ],
+                    "resource": "aws_s3_bucket_public_access_block.exports",
+                    "evaluations": null,
+                    "check_class": "checkov.terraform.checks.resource.aws.S3BlockPublicACLs",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/bc-aws-s3-19",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf"
+                },
+                {
+                    "check_id": "CKV_AWS_54",
+                    "bc_check_id": "BC_AWS_S3_20",
+                    "check_name": "Ensure S3 bucket has block public policy enabled",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "block_public_policy"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/terraform/main.tf",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf",
+                    "repo_file_path": "/infra/terraform/main.tf",
+                    "file_line_range": [
+                        10,
+                        16
+                    ],
+                    "resource": "aws_s3_bucket_public_access_block.exports",
+                    "evaluations": null,
+                    "check_class": "checkov.terraform.checks.resource.aws.S3BlockPublicPolicy",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/bc-aws-s3-20",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf"
+                },
+                {
+                    "check_id": "CKV_AWS_55",
+                    "bc_check_id": "BC_AWS_S3_21",
+                    "check_name": "Ensure S3 bucket has ignore public ACLs enabled",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "ignore_public_acls"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/terraform/main.tf",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf",
+                    "repo_file_path": "/infra/terraform/main.tf",
+                    "file_line_range": [
+                        10,
+                        16
+                    ],
+                    "resource": "aws_s3_bucket_public_access_block.exports",
+                    "evaluations": null,
+                    "check_class": "checkov.terraform.checks.resource.aws.S3IgnorePublicACLs",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/bc-aws-s3-21",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf"
+                },
+                {
+                    "check_id": "CKV_AWS_56",
+                    "bc_check_id": "BC_AWS_S3_22",
+                    "check_name": "Ensure S3 bucket has 'restrict_public_buckets' enabled",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "restrict_public_buckets"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/terraform/main.tf",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf",
+                    "repo_file_path": "/infra/terraform/main.tf",
+                    "file_line_range": [
+                        10,
+                        16
+                    ],
+                    "resource": "aws_s3_bucket_public_access_block.exports",
+                    "evaluations": null,
+                    "check_class": "checkov.terraform.checks.resource.aws.S3RestrictPublicBuckets",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/s3-policies/bc-aws-s3-22",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf"
+                },
+                {
+                    "check_id": "CKV_AWS_24",
+                    "bc_check_id": "BC_AWS_NETWORKING_1",
+                    "check_name": "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "ingress/[0]/from_port",
+                            "ingress/[0]/to_port",
+                            "ingress/[0]/cidr_blocks",
+                            "ingress/[0]/ipv6_cidr_blocks"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/terraform/main.tf",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf",
+                    "repo_file_path": "/infra/terraform/main.tf",
+                    "file_line_range": [
+                        18,
+                        29
+                    ],
+                    "resource": "aws_security_group.app",
+                    "evaluations": null,
+                    "check_class": "checkov.terraform.checks.resource.aws.SecurityGroupUnrestrictedIngress22",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-networking-policies/networking-1-port-security",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf"
+                },
+                {
+                    "check_id": "CKV_AWS_161",
+                    "bc_check_id": "BC_AWS_IAM_65",
+                    "check_name": "Ensure RDS database has IAM authentication enabled",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "iam_database_authentication_enabled"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/terraform/main.tf",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf",
+                    "repo_file_path": "/infra/terraform/main.tf",
+                    "file_line_range": [
+                        31,
+                        41
+                    ],
+                    "resource": "aws_db_instance.payments",
+                    "evaluations": null,
+                    "check_class": "checkov.terraform.checks.resource.aws.RDSIAMAuthentication",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-iam-policies/ensure-rds-database-has-iam-authentication-enabled",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf"
+                },
+                {
+                    "check_id": "CKV_AWS_293",
+                    "bc_check_id": "BC_AWS_GENERAL_208",
+                    "check_name": "Ensure that AWS database instances have deletion protection enabled",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "deletion_protection"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/terraform/main.tf",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf",
+                    "repo_file_path": "/infra/terraform/main.tf",
+                    "file_line_range": [
+                        31,
+                        41
+                    ],
+                    "resource": "aws_db_instance.payments",
+                    "evaluations": null,
+                    "check_class": "checkov.terraform.checks.resource.aws.RDSInstanceDeletionProtection",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/bc-aws-293",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf"
+                },
+                {
+                    "check_id": "CKV_AWS_353",
+                    "bc_check_id": "BC_AWS_LOGGING_47",
+                    "check_name": "Ensure that RDS instances have performance insights enabled",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "performance_insights_enabled"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/terraform/main.tf",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf",
+                    "repo_file_path": "/infra/terraform/main.tf",
+                    "file_line_range": [
+                        31,
+                        41
+                    ],
+                    "resource": "aws_db_instance.payments",
+                    "evaluations": null,
+                    "check_class": "checkov.terraform.checks.resource.aws.RDSInstancePerformanceInsights",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/bc-aws-353",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf"
+                },
+                {
+                    "check_id": "CKV_AWS_157",
+                    "bc_check_id": "BC_AWS_GENERAL_73",
+                    "check_name": "Ensure that RDS instances have Multi-AZ enabled",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "multi_az"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/terraform/main.tf",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf",
+                    "repo_file_path": "/infra/terraform/main.tf",
+                    "file_line_range": [
+                        31,
+                        41
+                    ],
+                    "resource": "aws_db_instance.payments",
+                    "evaluations": null,
+                    "check_class": "checkov.terraform.checks.resource.aws.RDSMultiAZEnabled",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/general-73",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf"
+                },
+                {
+                    "check_id": "CKV_AWS_129",
+                    "bc_check_id": "BC_AWS_IAM_60",
+                    "check_name": "Ensure that respective logs of Amazon Relational Database Service (Amazon RDS) are enabled",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "enabled_cloudwatch_logs_exports/[0]"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/terraform/main.tf",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf",
+                    "repo_file_path": "/infra/terraform/main.tf",
+                    "file_line_range": [
+                        31,
+                        41
+                    ],
+                    "resource": "aws_db_instance.payments",
+                    "evaluations": null,
+                    "check_class": "checkov.terraform.checks.resource.aws.DBInstanceLogging",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-iam-policies/ensure-that-respective-logs-of-amazon-relational-database-service-amazon-rds-are-enabled",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf"
+                },
+                {
+                    "check_id": "CKV_AWS_226",
+                    "bc_check_id": "BC_AWS_GENERAL_121",
+                    "check_name": "Ensure DB instance gets all minor upgrades automatically",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "auto_minor_version_upgrade"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/terraform/main.tf",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf",
+                    "repo_file_path": "/infra/terraform/main.tf",
+                    "file_line_range": [
+                        31,
+                        41
+                    ],
+                    "resource": "aws_db_instance.payments",
+                    "evaluations": null,
+                    "check_class": "checkov.terraform.checks.resource.aws.DBInstanceMinorUpgrade",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/ensure-aws-db-instance-gets-all-minor-upgrades-automatically",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf"
+                },
+                {
+                    "check_id": "CKV_AWS_17",
+                    "bc_check_id": "BC_AWS_PUBLIC_2",
+                    "check_name": "Ensure all data stored in RDS is not publicly accessible",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "publicly_accessible"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/terraform/main.tf",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf",
+                    "repo_file_path": "/infra/terraform/main.tf",
+                    "file_line_range": [
+                        31,
+                        41
+                    ],
+                    "resource": "aws_db_instance.payments",
+                    "evaluations": null,
+                    "check_class": "checkov.terraform.checks.resource.aws.RDSPubliclyAccessible",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/public-policies/public-2",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf"
+                },
+                {
+                    "check_id": "CKV_AWS_118",
+                    "bc_check_id": "BC_AWS_LOGGING_28",
+                    "check_name": "Ensure that enhanced monitoring is enabled for Amazon RDS instances",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "monitoring_interval"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/terraform/main.tf",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf",
+                    "repo_file_path": "/infra/terraform/main.tf",
+                    "file_line_range": [
+                        31,
+                        41
+                    ],
+                    "resource": "aws_db_instance.payments",
+                    "evaluations": null,
+                    "check_class": "checkov.terraform.checks.resource.aws.RDSEnhancedMonitorEnabled",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-logging-policies/ensure-that-enhanced-monitoring-is-enabled-for-amazon-rds-instances",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf"
+                },
+                {
+                    "check_id": "CKV_AWS_16",
+                    "bc_check_id": "BC_AWS_GENERAL_4",
+                    "check_name": "Ensure all data stored in the RDS is securely encrypted at rest",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "storage_encrypted"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/terraform/main.tf",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf",
+                    "repo_file_path": "/infra/terraform/main.tf",
+                    "file_line_range": [
+                        31,
+                        41
+                    ],
+                    "resource": "aws_db_instance.payments",
+                    "evaluations": null,
+                    "check_class": "checkov.terraform.checks.resource.aws.RDSEncryption",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/aws-policies/aws-general-policies/general-4",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf"
+                }
+            ]
+        },
+        "summary": {
+            "passed": 11,
+            "failed": 14,
+            "skipped": 0,
+            "parsing_errors": 0,
+            "resource_count": 4,
+            "checkov_version": "3.4.3"
+        }
+    },
+    {
+        "check_type": "kubernetes",
+        "results": {
+            "failed_checks": [
+                {
+                    "check_id": "CKV_K8S_37",
+                    "bc_check_id": "BC_K8S_34",
+                    "check_name": "Minimize the admission of containers with capabilities assigned",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "spec/template/spec/containers/[0]/securityContext/capabilities/drop"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.MinimizeCapabilities",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-34",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_31",
+                    "bc_check_id": "BC_K8S_29",
+                    "check_name": "Ensure that the seccomp profile is set to docker/default or runtime/default",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": []
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.Seccomp",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-29",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_8",
+                    "bc_check_id": "BC_K8S_7",
+                    "check_name": "Liveness Probe Should be Configured",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "spec/template/spec/containers/[0]/livenessProbe"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.LivenessProbe",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-7",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_12",
+                    "bc_check_id": "BC_K8S_11",
+                    "check_name": "Memory requests should be set",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "spec/template/spec/containers/[0]/resources/requests/memory"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.MemoryRequests",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-11",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_20",
+                    "bc_check_id": "BC_K8S_19",
+                    "check_name": "Containers should not run with allowPrivilegeEscalation",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "spec/template/spec/containers/[0]/securityContext/allowPrivilegeEscalation"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.AllowPrivilegeEscalation",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-19",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_13",
+                    "bc_check_id": "BC_K8S_12",
+                    "check_name": "Memory limits should be set",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "spec/template/spec/containers/[0]/resources/limits/memory"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.MemoryLimits",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-12",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_40",
+                    "bc_check_id": "BC_K8S_37",
+                    "check_name": "Containers should run as a high UID to avoid host conflict",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": []
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.RootContainersHighUID",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-37",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_10",
+                    "bc_check_id": "BC_K8S_9",
+                    "check_name": "CPU requests should be set",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "spec/template/spec/containers/[0]/resources/requests/cpu"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.CPURequests",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-9",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_16",
+                    "bc_check_id": "BC_K8S_15",
+                    "check_name": "Container should not be privileged",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "spec/template/spec/containers/[0]/securityContext/privileged"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.PrivilegedContainers",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-15",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_19",
+                    "bc_check_id": "BC_K8S_18",
+                    "check_name": "Containers should not share the host network namespace",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": []
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.SharedHostNetworkNamespace",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-18",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_22",
+                    "bc_check_id": "BC_K8S_21",
+                    "check_name": "Use read-only filesystem for containers where possible",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "spec/template/spec/containers/[0]/securityContext/readOnlyRootFilesystem"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.ReadOnlyFilesystem",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-21",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_9",
+                    "bc_check_id": "BC_K8S_8",
+                    "check_name": "Readiness Probe Should be Configured",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "spec/template/spec/containers/[0]/readinessProbe"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.ReadinessProbe",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-8",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_28",
+                    "bc_check_id": "BC_K8S_27",
+                    "check_name": "Minimize the admission of containers with the NET_RAW capability",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "spec/template/spec/containers/[0]/securityContext/capabilities/drop"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.DropCapabilities",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-27",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_29",
+                    "bc_check_id": "BC_K8S_43",
+                    "check_name": "Apply security context to your pods and containers",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": []
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.PodSecurityContext",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/ensure-securitycontext-is-applied-to-pods-and-containers",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_14",
+                    "bc_check_id": "BC_K8S_13",
+                    "check_name": "Image Tag should be fixed - not latest or blank",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "spec/template/spec/containers/[0]/image"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.ImageTagFixed",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-13",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_38",
+                    "bc_check_id": "BC_K8S_35",
+                    "check_name": "Ensure that Service Account Tokens are only mounted where necessary",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": []
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.ServiceAccountTokens",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-35",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_21",
+                    "bc_check_id": "BC_K8S_20",
+                    "check_name": "The default namespace should not be used",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": []
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.DefaultNamespace",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-20",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_23",
+                    "bc_check_id": "BC_K8S_22",
+                    "check_name": "Minimize the admission of root containers",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": []
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.RootContainers",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-22",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_43",
+                    "bc_check_id": "BC_K8S_39",
+                    "check_name": "Image should use digest",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "spec/template/spec/containers/[0]/image"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.ImageDigest",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-39",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                },
+                {
+                    "check_id": "CKV_K8S_11",
+                    "bc_check_id": "BC_K8S_10",
+                    "check_name": "CPU limits should be set",
+                    "check_result": {
+                        "result": "FAILED",
+                        "evaluated_keys": [
+                            "spec/template/spec/containers/[0]/resources/limits/cpu"
+                        ]
+                    },
+                    "code_block": null,
+                    "file_path": "/infra/k8s/deployment.yaml",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/infra/k8s/deployment.yaml",
+                    "repo_file_path": "/infra/infra/k8s/deployment.yaml",
+                    "file_line_range": [
+                        2,
+                        23
+                    ],
+                    "resource": "Deployment.default.payments",
+                    "evaluations": {},
+                    "check_class": "checkov.kubernetes.checks.resource.k8s.CPULimits",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/kubernetes-policies/kubernetes-policy-index/bc-k8s-10",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null
+                }
+            ]
+        },
+        "summary": {
+            "passed": 68,
+            "failed": 20,
+            "skipped": 0,
+            "parsing_errors": 0,
+            "resource_count": 2,
+            "checkov_version": "3.4.3"
+        }
+    },
+    {
+        "check_type": "secrets",
+        "results": {
+            "failed_checks": [
+                {
+                    "check_id": "CKV_SECRET_6",
+                    "bc_check_id": "BC_GIT_6",
+                    "check_name": "Base64 High Entropy String",
+                    "check_result": {
+                        "result": "FAILED"
+                    },
+                    "code_block": null,
+                    "file_path": "/terraform/main.tf",
+                    "file_abs_path": "/Users/braylo/Projects/devsecops-pipeline/infra/terraform/main.tf",
+                    "repo_file_path": "/infra/terraform/main.tf",
+                    "file_line_range": [
+                        37,
+                        38
+                    ],
+                    "resource": "89c6d05a855e33db028159e55d7b74f4a09dfa4e",
+                    "evaluations": null,
+                    "check_class": "",
+                    "fixed_definition": null,
+                    "entity_tags": null,
+                    "caller_file_path": null,
+                    "caller_file_line_range": null,
+                    "resource_address": null,
+                    "severity": null,
+                    "bc_category": null,
+                    "benchmarks": null,
+                    "description": null,
+                    "short_description": null,
+                    "vulnerability_details": null,
+                    "connected_node": null,
+                    "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/secrets-policies/secrets-policy-index/git-secrets-6",
+                    "details": [],
+                    "check_len": null,
+                    "definition_context_file_path": null,
+                    "validation_status": "Unavailable",
+                    "added_commit_hash": "",
+                    "removed_commit_hash": "",
+                    "added_by": "",
+                    "removed_date": "",
+                    "added_date": ""
+                }
+            ]
+        },
+        "summary": {
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "parsing_errors": 0,
+            "resource_count": 1,
+            "checkov_version": "3.4.3"
+        }
+    }
+]

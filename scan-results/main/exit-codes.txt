@@ -1,0 +1,7 @@
+semgrep=1
+pip-audit=1
+osv-scanner=1
+gitleaks=1
+checkov=1
+trivy-config=1
+trivy-image=1
