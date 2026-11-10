@@ -1,6 +1,6 @@
 # devsecops-pipeline
 
-A template repo whose GitHub Actions pipeline gates every push on **SAST** (Semgrep), **SCA** (pip-audit + OSV-Scanner), **secret scanning** (gitleaks), **IaC scanning** (Checkov + Trivy config on Terraform, Kubernetes and the Dockerfile), **container scanning** (Trivy) and **DAST** (OWASP ZAP baseline against the app from [`owasp-vuln-vs-fixed`](../owasp-vuln-vs-fixed), started inside the CI runner). The `main` branch carries planted findings and fails every stage. The `fixed` branch remediates them and passes. Real scanner output for both branches is committed in [`scan-results/`](scan-results/).
+A template repo whose GitHub Actions pipeline gates every push on **SAST** (Semgrep), **SCA** (pip-audit + OSV-Scanner), **secret scanning** (gitleaks), **IaC scanning** (Checkov + Trivy config on Terraform, Kubernetes and the Dockerfile), **container scanning** (Trivy) and **DAST** (OWASP ZAP baseline against the app from [`owasp-vuln-vs-fixed`](https://github.com/braylo777/owasp-vuln-vs-fixed), started inside the CI runner). The `main` branch carries planted findings and fails every stage. The `fixed` branch remediates them and passes. Real scanner output for both branches is committed in [`scan-results/`](scan-results/).
 
 ## What it is
 | Path | `main` (planted) | `fixed` (remediated) |
